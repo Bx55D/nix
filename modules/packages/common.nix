@@ -9,5 +9,6 @@
 	  vim
 	  neovim
 	  xclip
+	  ripgrep
 	];
 }

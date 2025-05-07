@@ -16,9 +16,8 @@ in
 
 			../../modules/base.nix
 			../../modules/home-manager.nix
-			../../modules/xorg.nix
 			../../modules/packages/common.nix
-			../../modules/packages/desktop.nix
+			../../modules/packages/development.nix
 		];
 
 # Bootloader.
@@ -28,9 +27,6 @@ in
 # Nix settings
 	nix.settings.experimental-features = ["nix-command" "flakes"];
 	nixpkgs.config.allowUnfree = true;
-
-# Pipewire
-	services.pipewire.pulse.enable = true; # Enables pipewire-pulse
 
 # Fonts
 		fonts.packages = with pkgs; [
@@ -45,14 +41,6 @@ in
 		autosuggestions.enable = true;
 		syntaxHighlighting.enable = true;
 	};
-	programs.zsh.ohMyZsh = {
-		enable = true;
-		custom = "/home/bud/.zsh/custom/"; # Ensure this path is accessible at build time if needed by OMZ itself
-# Or better, manage OMZ customisations declaratively via Home Manager.
-			theme = "powerlevel10k/powerlevel10k";
-	};
-
-	programs.dconf.enable = true; # For GTK settings, etc.
-
-		system.stateVersion = "24.11";
+	
+	system.stateVersion = "24.11";
 }
