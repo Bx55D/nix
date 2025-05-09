@@ -2,8 +2,6 @@
 { pkgs, config, ... }:
 {
 	environment.systemPackages = with pkgs; [
-	  clang-tools
-	  gcc
 	  gnumake
 	  rustc
 	  cargo

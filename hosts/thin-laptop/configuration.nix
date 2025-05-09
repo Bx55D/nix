@@ -16,7 +16,7 @@ in
 
 			../../modules/base.nix
 			../../modules/home-manager.nix
-			../../modules/xorg.nix
+			../../modules/wl.nix
 			../../modules/packages/common.nix
 			../../modules/packages/desktop.nix
 		];

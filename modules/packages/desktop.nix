@@ -15,20 +15,16 @@ st-local = pkgs.st.overrideAttrs (oldAttrs: {
 in
 {
 	environment.systemPackages = with pkgs; [
-	  # Xorg base (could be a separate set if you want more granularity)
-	  xorg.xev
-	  xorg.xinit
-
 	  # Desktop GUI Apps
 	  firefox
 	  nautilus
 	  feh
-	  pavucontrol
+	  pipewire
+	  wireplumber
 	  catppuccin-gtk
 	  remmina
 	  refine # Assuming this is a valid package name
 	  brightnessctl
-	  pulseaudio
 
 	  # CLI tools relevant for a desktop
 	  xclip
@@ -37,7 +33,5 @@ in
 
 	  # Suckless Suite (using the custom ones defined in configuration.nix)
 	  st-local
-	  dwmblocks-local
-	  dmenu
 	];
 }
