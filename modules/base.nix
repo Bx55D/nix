@@ -1,6 +1,11 @@
 { config, pkgs, lib, ... }:
 
 {
+imports =
+	[
+	../host.nix
+	];
+
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/London";
