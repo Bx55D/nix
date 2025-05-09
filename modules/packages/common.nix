@@ -5,7 +5,7 @@
 	  git
 	  linuxPackages.cpupower
 	  unzip
-	  neofetch
+	  fastfetch
 	  vim
 	  neovim
 	  xclip
