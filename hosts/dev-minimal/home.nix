@@ -9,4 +9,11 @@
 		userName = "bud";
 		userEmail = "ben.donovan@musiclegends.net";
 	};
+
+	home.file = {
+		".zshrc" = {
+			text = ''autoload -U colors && colors
+			export PS1="%{$fg[blue]%}%n%{$reset_color%}@%m> "'';
+		};
+	};
 }

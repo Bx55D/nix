@@ -44,6 +44,10 @@ services.openssh.enable = true;
 		autosuggestions.enable = true;
 		syntaxHighlighting.enable = true;
 	};
+
+	programs.zsh.ohMyZsh = {
+		enable = true;
+	};
 	
 	system.stateVersion = "24.11";
 }
