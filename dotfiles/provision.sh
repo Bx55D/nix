@@ -6,4 +6,3 @@ mkdir -p ~/.config
 
 ln -s "${CURRENT_DIRECTORY}/nvim" ~/.config/nvim
 ln -s "${CURRENT_DIRECTORY}/applications" ~/.applications
-ln -s "${CURRENT_DIRECTORY}/zsh" ~/.zsh

@@ -146,6 +146,10 @@ static const enum libinput_config_tap_button_map button_map =
 /* commands */
 static const char *termcmd[] = {"st", NULL};
 static const char *menucmd[] = {"wmenu-run", NULL};
+static const char *lowervolcmd[] = {"wpctl", "set-volume", "@DEFAULT_SINK@",
+                                    "5%-", NULL};
+static const char *raisevolcmd[] = {"wpctl", "set-volume", "@DEFAULT_SINK@",
+                                    "5%+", NULL};
 
 static const Key keys[] = {
     /* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
@@ -171,6 +175,9 @@ static const Key keys[] = {
     {MODKEY | WLR_MODIFIER_SHIFT, XKB_KEY_parenright, tag, {.ui = ~0}},
     {MODKEY, XKB_KEY_comma, focusmon, {.i = WLR_DIRECTION_LEFT}},
     {MODKEY, XKB_KEY_period, focusmon, {.i = WLR_DIRECTION_RIGHT}},
+    {MODKEY, XKB_KEY_XF86AudioRaiseVolume, spawn, {.v = raisevolcmd}},
+    {MODKEY, XKB_KEY_XF86AudioLowerVolume, spawn, {.v = lowervolcmd}},
+
     {MODKEY | WLR_MODIFIER_SHIFT,
      XKB_KEY_less,
      tagmon,

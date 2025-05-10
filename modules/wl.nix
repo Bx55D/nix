@@ -1,3 +1,9 @@
+# This is specifically for configuring Wayland compositor
+# It has been kept separate from desktop.nix to allow for hot
+# swap compatibility for X11 if desired.
+
+# Do not include this in your host files! Use desktop.nix instead
+
 { config, pkgs, lib, ... }:
 let
 dwm-local-src = lib.cleanSource /home/bud/.applications/dwm;
@@ -17,8 +23,6 @@ dwlb-local-src = lib.cleanSource /home/bud/.applications/dwlb;
     src = dwlb-local-src;
     patches = []; # Add patches here if you have any
   });
-
-
 in
 {
 	environment.systemPackages = with pkgs; [

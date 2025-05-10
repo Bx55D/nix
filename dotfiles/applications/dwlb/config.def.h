@@ -1,8 +1,8 @@
-#define HEX_COLOR(hex)				\
-	{ .red   = ((hex >> 24) & 0xff) * 257,	\
-	  .green = ((hex >> 16) & 0xff) * 257,	\
-	  .blue  = ((hex >> 8) & 0xff) * 257,	\
-	  .alpha = (hex & 0xff) * 257 }
+#define HEX_COLOR(hex)                                                         \
+  {.red = ((hex >> 24) & 0xff) * 257,                                          \
+   .green = ((hex >> 16) & 0xff) * 257,                                        \
+   .blue = ((hex >> 8) & 0xff) * 257,                                          \
+   .alpha = (hex & 0xff) * 257}
 
 // use ipc functionality
 static bool ipc = false;
@@ -27,7 +27,7 @@ static uint32_t buffer_scale = 1;
 // font
 static char *fontstr = "MesloLGS Nerd Font:size=18";
 // tag names
-static char *tags_names[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static char *tags_names[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
 // set 16-bit colors for bar
 // use either pixman_color_t struct or HEX_COLOR macro for 8-bit colors
