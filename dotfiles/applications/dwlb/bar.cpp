@@ -110,11 +110,10 @@ void get_wifi_status(std::string *result) {
 
   int wifi_status;
 
-  wifi_status = system("curl --silent --head --fail --connect-timeout 2 "
-                       "http://google.com > /dev/null");
+  wifi_status = system("nmcli conn show --active | grep wifi");
 
   if (wifi_status == 0) {
-    // Successul Ping
+    // Successul
     result->append(ICON_WIFI);
     return;
   }
@@ -123,7 +122,7 @@ void get_wifi_status(std::string *result) {
 }
 
 void get_battery(std::string *result) {
-  std::string ICON_CHG = "⚡";
+  std::string ICON_CHG = "⚡  ";
   std::string ICON_DIS = "  ";
 
   std::string battery;
