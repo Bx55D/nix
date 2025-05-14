@@ -26,7 +26,10 @@ dwlb-local-src = lib.cleanSource /home/bud/.applications/dwlb;
 in
 {
 	environment.systemPackages = with pkgs; [
+		wev
 		swaybg
+		grim
+		slurp
 		wbg
 		wmenu
 		wl-clipboard
